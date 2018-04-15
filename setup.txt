@@ -1,0 +1,28 @@
+﻿Instruction to install and setup dataset:
+=========================================
+
+- Download and extract data set (handled in python):
+https://data.colorado.gov/Business/Sales-Rooms-in-Colorado/9pwz-gi5v
+
+- Download and install MongoDB server:
+https://www.mongodb.org/downloads#production 
+
+- Start the mongodb server
+
+ C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe - This will start the server locally. On some platforms, you might have to pass —-dbpath <path>.
+
+- Open another command line window and run the mongo shell (this connects to your local mongo server, or just use inside python script):
+
+C:\Program Files\MongoDB\Server\3.2\bin\mongo.exe
+
+Database Creation and Collection creation handled in python
+
+- To verify data was imported correctly:
+
+> use gocodecoloradodb
+switched to db gocodecoloradodb
+> db.salesRoomsCollection.find()
+{ "_id" : ObjectId("56d3dcec08135fca54cabc15"), "business_id" : "UsFtqoBl7naz8AV
+UBZMjQQ", "full_address" : "202 McClure St\nDravosburg, PA 15034", "hours" : {
+}, "open" : true, "categories" : [ "Nightlife" ], "city" : "Dravosburg", "review
+.....
